@@ -1,0 +1,4 @@
+ string filename = "Sample.exe";
+            Assembly SampleAssembly = Assembly.LoadFrom(filename);
+            Type myType = SampleAssembly.GetTypes()[0];
+            SampleAssembly.EntryPoint.Invoke(Activator.CreateInstance(myType), new string[] { null });
